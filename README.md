@@ -45,8 +45,8 @@ The silhouettes come from scale models photographed at many angles, so one vehic
 
 ## c. GitHub repository link
 
-- Repository: `<<add the public GitHub URL>>`
-- Live app: `<<add the Streamlit Community Cloud URL>>`
+- Repository: <https://github.com/NAVYANALADALA/vehicle-silhouette-ml>
+- Live app: <https://vehicle-silhouette-ml-navya.streamlit.app>
 
 ```
 app.py               Streamlit app (loads saved models, no retraining)
