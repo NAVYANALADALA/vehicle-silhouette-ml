@@ -1,0 +1,120 @@
+{
+  "dataset": "UCI Statlog (Vehicle Silhouettes), id 149",
+  "features": [
+    "compactness",
+    "circularity",
+    "distance_circularity",
+    "radius_ratio",
+    "pr_axis_aspect_ratio",
+    "max_length_aspect_ratio",
+    "scatter_ratio",
+    "elongatedness",
+    "pr_axis_rectangularity",
+    "max_length_rectangularity",
+    "scaled_variance_major",
+    "scaled_variance_minor",
+    "scaled_radius_of_gyration",
+    "skewness_major",
+    "skewness_minor",
+    "kurtosis_minor",
+    "kurtosis_major",
+    "hollows_ratio"
+  ],
+  "target": "vehicle_class",
+  "class_labels": [
+    "bus",
+    "opel",
+    "saab",
+    "van"
+  ],
+  "random_state": 2026,
+  "test_size": 0.2,
+  "n_train": 676,
+  "n_test": 170,
+  "cv": "5-fold stratified, scoring=f1_macro",
+  "averaging": "macro (precision/recall/F1), OvR macro (AUC)",
+  "best_params": {
+    "Logistic Regression": {
+      "C": 10
+    },
+    "Decision Tree": {
+      "ccp_alpha": 0.02,
+      "criterion": "entropy",
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "min_samples_split": 2
+    },
+    "KNN": {
+      "n_neighbors": 9,
+      "p": 1,
+      "weights": "uniform"
+    },
+    "Naive Bayes": {
+      "var_smoothing": 1e-05
+    },
+    "Support Vector Machine": {
+      "C": 1000,
+      "gamma": 0.03,
+      "kernel": "rbf"
+    }
+  },
+  "model_files": {
+    "Logistic Regression": "logistic_regression.joblib",
+    "Decision Tree": "decision_tree.joblib",
+    "KNN": "knn.joblib",
+    "Naive Bayes": "naive_bayes.joblib",
+    "Support Vector Machine": "svm.joblib"
+  },
+  "test_metrics": {
+    "Logistic Regression": {
+      "Accuracy": 0.8176,
+      "AUC": 0.9525,
+      "Precision": 0.821,
+      "Recall": 0.8187,
+      "F1": 0.817,
+      "MCC": 0.7584
+    },
+    "Decision Tree": {
+      "Accuracy": 0.6588,
+      "AUC": 0.8583,
+      "Precision": 0.6732,
+      "Recall": 0.6584,
+      "F1": 0.6259,
+      "MCC": 0.562
+    },
+    "KNN": {
+      "Accuracy": 0.7235,
+      "AUC": 0.9124,
+      "Precision": 0.7111,
+      "Recall": 0.7248,
+      "F1": 0.7099,
+      "MCC": 0.6356
+    },
+    "Naive Bayes": {
+      "Accuracy": 0.4235,
+      "AUC": 0.7533,
+      "Precision": 0.5031,
+      "Recall": 0.4316,
+      "F1": 0.395,
+      "MCC": 0.2577
+    },
+    "Support Vector Machine": {
+      "Accuracy": 0.8412,
+      "AUC": 0.9612,
+      "Precision": 0.8443,
+      "Recall": 0.8417,
+      "F1": 0.8403,
+      "MCC": 0.79
+    }
+  },
+  "environment": {
+    "host": "vm",
+    "platform": "Linux-6.18.44-fc-v233-x86_64-with-glibc2.39",
+    "python": "3.13.18",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "joblib": "1.6.0",
+    "run_at": "2026-11-04 21:09:55"
+  }
+}
