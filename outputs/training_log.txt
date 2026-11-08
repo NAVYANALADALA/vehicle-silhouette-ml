@@ -1,0 +1,62 @@
+========================================================================
+ ML Assignment 2 - Vehicle Silhouette Classification (5 models)
+   host         : vm
+   platform     : Linux-6.18.44-fc-v233-x86_64-with-glibc2.39
+   python       : 3.13.18
+   scikit-learn : 1.9.1
+   pandas       : 3.0.5
+   numpy        : 2.5.3
+   joblib       : 1.6.0
+   run_at       : 2026-11-04 21:09:55
+========================================================================
+
+Train: (676, 18)  Test: (170, 18)
+Train class counts: {'bus': 174, 'saab': 173, 'opel': 170, 'van': 159}
+Test  class counts: {'bus': 44, 'saab': 44, 'opel': 42, 'van': 40}
+
+[Logistic Regression] best {'C': 10}  (2.7s)
+   test : Accuracy=0.8176  AUC=0.9525  Precision=0.8210  Recall=0.8187  F1=0.8170  MCC=0.7584
+
+[Decision Tree] best {'ccp_alpha': 0.02, 'criterion': 'entropy', 'max_depth': 8, 'min_samples_leaf': 5, 'min_samples_split': 2}  (34.5s)
+   test : Accuracy=0.6588  AUC=0.8583  Precision=0.6732  Recall=0.6584  F1=0.6259  MCC=0.5620
+
+[KNN] best {'n_neighbors': 9, 'p': 1, 'weights': 'uniform'}  (3.4s)
+   test : Accuracy=0.7235  AUC=0.9124  Precision=0.7111  Recall=0.7248  F1=0.7099  MCC=0.6356
+
+[Naive Bayes] best {'var_smoothing': 1e-05}  (0.5s)
+   test : Accuracy=0.4235  AUC=0.7533  Precision=0.5031  Recall=0.4316  F1=0.3950  MCC=0.2577
+
+[Support Vector Machine] best {'C': 1000, 'gamma': 0.03, 'kernel': 'rbf'}  (4.0s)
+   test : Accuracy=0.8412  AUC=0.9612  Precision=0.8443  Recall=0.8417  F1=0.8403  MCC=0.7900
+
+========================================================================
+ HOLD-OUT TEST RESULTS (n = 170, macro averages)
+========================================================================
+                        Accuracy     AUC  Precision  Recall      F1     MCC
+Model                                                                      
+Logistic Regression       0.8176  0.9525     0.8210  0.8187  0.8170  0.7584
+Decision Tree             0.6588  0.8583     0.6732  0.6584  0.6259  0.5620
+KNN                       0.7235  0.9124     0.7111  0.7248  0.7099  0.6356
+Naive Bayes               0.4235  0.7533     0.5031  0.4316  0.3950  0.2577
+Support Vector Machine    0.8412  0.9612     0.8443  0.8417  0.8403  0.7900
+
+Cross-validation (train only):
+                        CV macro-F1 mean  CV macro-F1 std  CV train macro-F1
+Model                                                                       
+Logistic Regression               0.7966           0.0159             0.8302
+Decision Tree                     0.7334           0.0075             0.7781
+KNN                               0.7176           0.0269             0.7993
+Naive Bayes                       0.4486           0.0570             0.4558
+Support Vector Machine            0.8450           0.0362             0.9982
+
+Train - test gap:
+                        Accuracy      F1     MCC
+Model                                           
+Logistic Regression       0.0034  0.0045  0.0030
+Decision Tree             0.0971  0.0994  0.1333
+KNN                       0.0753  0.0823  0.0982
+Naive Bayes               0.0410  0.0422  0.0598
+Support Vector Machine    0.1559  0.1568  0.2060
+
+Saved 5 models to model/ and results to outputs/
+Pin this in requirements.txt ->  scikit-learn==1.9.1
