@@ -97,7 +97,7 @@ Each `.joblib` file is a full scikit-learn Pipeline (imputer → scaler where ne
 | Naive Bayes | 0.4235 | 0.7533 | 0.5031 | 0.4316 | 0.3950 | 0.2577 |
 | Support Vector Machine | **0.8412** | **0.9612** | **0.8443** | **0.8417** | **0.8403** | **0.7900** |
 
-These values come from `outputs/model_comparison.csv`. The app shows the same values when `test_data.csv` is uploaded.
+These values come from `outputs/model_comparison.csv`. The app shows the same values when `test_data.csv` is uploaded. Re-running `training.py` on BITS Virtual Lab (8 Nov 2026, scikit-learn 1.9.1, Python 3.12.7) reproduced all 30 values exactly except Logistic Regression AUC, which came out as 0.9526 instead of 0.9525. That is a floating-point difference in the fourth decimal place between machines.
 
 **Generalisation check** (macro-F1):
 
