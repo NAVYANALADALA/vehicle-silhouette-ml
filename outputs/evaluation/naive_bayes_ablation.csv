@@ -1,0 +1,4 @@
+Variant,CV macro-F1 mean,CV macro-F1 std
+GaussianNB on raw features (submitted),0.4471,0.0606
+Yeo-Johnson -> GaussianNB (fixes skew),0.4716,0.0435
+PCA whitening -> GaussianNB (removes correlation),0.7564,0.0252

@@ -1,0 +1,6 @@
+Model,CV macro-F1 mean,CV macro-F1 std,CV train macro-F1,Candidates,Search time (s),Best params
+Logistic Regression,0.7966,0.0159,0.8302,6,2.7,"{""C"": 10}"
+Decision Tree,0.7334,0.0075,0.7781,540,34.5,"{""ccp_alpha"": 0.02, ""criterion"": ""entropy"", ""max_depth"": 8, ""min_samples_leaf"": 5, ""min_samples_split"": 2}"
+KNN,0.7176,0.0269,0.7993,52,3.4,"{""n_neighbors"": 9, ""p"": 1, ""weights"": ""uniform""}"
+Naive Bayes,0.4486,0.057,0.4558,9,0.5,"{""var_smoothing"": 1e-05}"
+Support Vector Machine,0.845,0.0362,0.9982,29,4.0,"{""C"": 1000, ""gamma"": 0.03, ""kernel"": ""rbf""}"

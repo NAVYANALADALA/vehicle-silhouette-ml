@@ -1,0 +1,85 @@
+===== Logistic Regression =====
+              precision  recall  f1-score   support
+bus              0.8958  0.9773    0.9348   44.0000
+opel             0.7353  0.5952    0.6579   42.0000
+saab             0.6531  0.7273    0.6882   44.0000
+van              1.0000  0.9750    0.9873   40.0000
+accuracy         0.8176  0.8176    0.8176    0.8176
+macro avg        0.8210  0.8187    0.8170  170.0000
+weighted avg     0.8178  0.8176    0.8149  170.0000
+
+Confusion matrix (rows = actual)
+              pred: bus  pred: opel  pred: saab  pred: van
+actual: bus          43           1           0          0
+actual: opel          0          25          17          0
+actual: saab          5           7          32          0
+actual: van           0           1           0         39
+
+===== Decision Tree =====
+              precision  recall  f1-score   support
+bus              0.8261  0.8636    0.8444   44.0000
+opel             0.6667  0.1905    0.2963   42.0000
+saab             0.5000  0.7045    0.5849   44.0000
+van              0.7000  0.8750    0.7778   40.0000
+accuracy         0.6588  0.6588    0.6588    0.6588
+macro avg        0.6732  0.6584    0.6259  170.0000
+weighted avg     0.6726  0.6588    0.6262  170.0000
+
+Confusion matrix (rows = actual)
+              pred: bus  pred: opel  pred: saab  pred: van
+actual: bus          38           0           1          5
+actual: opel          4           8          25          5
+actual: saab          4           4          31          5
+actual: van           0           0           5         35
+
+===== KNN =====
+              precision  recall  f1-score   support
+bus              0.8400  0.9545    0.8936   44.0000
+opel             0.6429  0.4286    0.5143   42.0000
+saab             0.5909  0.5909    0.5909   44.0000
+van              0.7708  0.9250    0.8409   40.0000
+accuracy         0.7235  0.7235    0.7235    0.7235
+macro avg        0.7111  0.7248    0.7099  170.0000
+weighted avg     0.7105  0.7235    0.7092  170.0000
+
+Confusion matrix (rows = actual)
+              pred: bus  pred: opel  pred: saab  pred: van
+actual: bus          42           0           0          2
+actual: opel          1          18          17          6
+actual: saab          5          10          26          3
+actual: van           2           0           1         37
+
+===== Naive Bayes =====
+              precision  recall  f1-score   support
+bus              0.7778  0.1591    0.2642   44.0000
+opel             0.4118  0.3333    0.3684   42.0000
+saab             0.4390  0.4091    0.4235   44.0000
+van              0.3837  0.8250    0.5238   40.0000
+accuracy         0.4235  0.4235    0.4235    0.4235
+macro avg        0.5031  0.4316    0.3950  170.0000
+weighted avg     0.5070  0.4235    0.3923  170.0000
+
+Confusion matrix (rows = actual)
+              pred: bus  pred: opel  pred: saab  pred: van
+actual: bus           7           7           2         28
+actual: opel          0          14          17         11
+actual: saab          0          12          18         14
+actual: van           2           1           4         33
+
+===== Support Vector Machine =====
+              precision  recall  f1-score   support
+bus              1.0000  0.9545    0.9767   44.0000
+opel             0.7429  0.6190    0.6753   42.0000
+saab             0.7059  0.8182    0.7579   44.0000
+van              0.9286  0.9750    0.9512   40.0000
+accuracy         0.8412  0.8412    0.8412    0.8412
+macro avg        0.8443  0.8417    0.8403  170.0000
+weighted avg     0.8435  0.8412    0.8396  170.0000
+
+Confusion matrix (rows = actual)
+              pred: bus  pred: opel  pred: saab  pred: van
+actual: bus          42           0           0          2
+actual: opel          0          26          15          1
+actual: saab          0           8          36          0
+actual: van           0           1           0         39
+

@@ -1,0 +1,6 @@
+Model,Accuracy,F1,MCC
+Logistic Regression,0.0034,0.0045,0.003
+Decision Tree,0.0971,0.0994,0.1333
+KNN,0.0753,0.0823,0.0982
+Naive Bayes,0.041,0.0422,0.0598
+Support Vector Machine,0.1559,0.1568,0.206
