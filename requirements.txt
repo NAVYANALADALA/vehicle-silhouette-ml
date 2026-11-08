@@ -1,0 +1,14 @@
+# Runtime dependencies for app.py (Streamlit Community Cloud installs these).
+# scikit-learn is pinned EXACTLY: the .joblib models were saved with 1.9.1 and
+# pickled estimators are only guaranteed to load in the same version.
+# If you retrain on BITS Virtual Lab with another version, put that version here.
+# numpy/pandas ranges were tested at both ends (2.3.5/2.5.3 and 2.3.3/3.0.5);
+# the range lets the app install on Python 3.11 - 3.14.
+streamlit==1.66.1
+scikit-learn==1.9.1
+numpy>=2.3.5,<2.6
+pandas>=2.3.3,<3.1
+matplotlib==3.11.2
+seaborn==0.13.2
+joblib==1.6.0
+tabulate==0.10.0
